@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function reverseString(str) {
+        return str.split("").reverse().join("");
+      }
+      function countCharacters(str) {
+        return str.length;
+      }
+      function capitalizeWords(sentence) {
+        return sentence
+          .split(" ")
+          .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+          .join(" ");
+      }
+      function findMax(arr) {
+        return Math.max(...arr);
+      }
+      function findMin(arr) {
+        return Math.min(...arr);
+      }
+      function sumArray(arr) {
+        return arr.reduce((sum, num) => sum + num, 0);
+      }
+      function filterArray(arr, condition) {
+        return arr.filter(condition);
+      }
+      function factorial(n) {
+        if (n === 0 || n === 1) return 1;
+        return n * factorial(n - 1);
+      }
+      function isPrime(num) {
+        if (num <= 1) return false;
+        for (let i = 2; i < num; i++) {
+          if (num % i === 0) return false;
+        }
+        return true;
+      }
+      function fibonacci(n) {
+        let seq = [0, 1];
+        for (let i = 2; i < n; i++) {
+          seq.push(seq[i - 1] + seq[i - 2]);
+        }
+        return seq.slice(0, n);
+      }
+    </script>
+  </body>
+</html>
